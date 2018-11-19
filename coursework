@@ -1,0 +1,25 @@
+class months
+    {
+
+        private int mouthID;
+        private int maximumtemp;
+        private int mimimumtemp;
+        private int numofdayofairfrost;
+        private int millimetersofrain;
+        private int hoursofsunshine;
+
+
+        public months(string themonthID, string themaximumtemp, string themimimumtemp,
+                      string thenumofdayofairfrost, string themillmetersofrain,
+                      string thehoursofsunshine)
+        {
+            mouthID = themonthID;
+            maximumtemp = themaximumtemp;
+            mimimumtemp = themimimumtemp;
+            numofdayofairfrost = thenumofdayofairfrost;
+            millimetersofrain = themillmetersofrain;
+            hoursofsunshine = thehoursofsunshine;            
+        }
+
+
+    }
