@@ -10,12 +10,12 @@ namespace MET_Office
     {
         //varibles for the year class
         private int yearID;
-        private int yeardescription;
+        private string yeardescription;
         private int allmonths;
         Years[] months;
 
         //two constuctors for the year class
-        public Years(int theyearID, int theyeardescripion, int theallmonths)
+        public Years(int theyearID, string theyeardescripion, int theallmonths)
         {
             yearID = theyearID;
             yeardescription = theyeardescripion;
@@ -23,7 +23,7 @@ namespace MET_Office
             months = null;
         }
 
-        public Years(int theyearID, int theyearsecription, int theallmonths, Years[] themonths)
+        public Years(int theyearID, string theyearsecription, int theallmonths, Years[] themonths)
         {
             yearID = theyearID;
             yeardescription = theyearsecription;
