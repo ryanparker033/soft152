@@ -1,0 +1,15 @@
+string filename;
+            int inyearID, inyeardescripion,inmonths;
+            int monthArraySize;
+
+            openFileDialog1.ShowDialog();
+            filename = openFileDialog1.FileName;
+
+            StreamReader input = new StreamReader(filename);
+            while (!input.EndOfStream)
+            {
+                inyearID = input.ReadLine();
+                inyeardescripion = input.ReadLine().ToString();
+                inmonths = Convert.ToInt32(input.ReadLine());
+
+            }
