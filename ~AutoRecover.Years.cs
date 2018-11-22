@@ -31,12 +31,12 @@ namespace MET_Office
             months = themonths;
         }
         //get the details for each of the years
-        public string getDetails()
+        //public string getDetails()
         {
-            string output;
-            output = String.Format("Year is {0} which was {1} and had {2}",
-                     yearID, yeardescription, months.Length);
-            return output;
+           // string output;
+           // output = String.Format("Year is {0} which was {1} and had {2}",
+                     //yearID, yeardescription, months.Length);
+           // return output;
         }
         //getter
         public Years[] getallmonths()
