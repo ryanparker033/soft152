@@ -1,25 +1,135 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Months and years", "Months and years\Months and years.csproj", "{97EF4C0F-8A85-47CA-B13F-8F5CDA3D8E44}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{97EF4C0F-8A85-47CA-B13F-8F5CDA3D8E44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97EF4C0F-8A85-47CA-B13F-8F5CDA3D8E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97EF4C0F-8A85-47CA-B13F-8F5CDA3D8E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97EF4C0F-8A85-47CA-B13F-8F5CDA3D8E44}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FF707E53-28CD-49D1-8876-B91A65CF145C}
-	EndGlobalSection
-EndGlobal
+class months
+    //Varibles 
+        private int monthID;
+        private int maximumtemp;
+        private int mimimumtemp;
+        private int airfrost;
+        private int millimetersrain;
+        private int hourssunshine;
+        //constructor 
+        public Months(int themonthID, int themaximumtemp, int themimimumtemp,
+                      int theairfrost, int themillmetersofrain,
+                      int thehoursofsunshine)
+        {
+            monthID = themonthID;
+            maximumtemp = themaximumtemp;
+            mimimumtemp = themimimumtemp;
+            airfrost = theairfrost;
+            millimetersrain = themillmetersofrain;
+            hourssunshine = thehoursofsunshine;
+        }
+        //Setters
+        public void setmonth(int inmonth)
+        {
+            monthID = inmonth;
+        }
+
+
+        public void setmaxtemp(int inmaxtemp)
+        {
+         maximumtemp = inmaxtemp;
+        }
+
+        public void setmintemp(int inmintemp)
+        {
+            mimimumtemp = inmintemp;
+        }
+                
+        public void numofdayairfrost(int inairfrost)
+        {
+            airfrost = inairfrost;
+        }
+       public void millimetersofrain(int inmillimetersofrain)
+       {
+         millimetersrain = inmillimetersofrain;
+        }
+        public void hoursofsunshine(int inhoursofsunshine)
+        {
+            hourssunshine = inhoursofsunshine;
+        }
+
+        //getters
+
+        public string getmonth()
+        {
+            return monthID.ToString();
+        }
+
+        public string getmaxtemp()
+        {
+            return maximumtemp.ToString();
+        }
+
+        public string getmaxtemperture()
+        {
+            return maximumtemp.ToString();
+        }
+
+        public string getmintemp()
+        {
+            return mimimumtemp.ToString();
+        }
+
+        public string getairfrost()
+        {
+            return airfrost.ToString();
+        }
+
+        public string getmillimetersofrain()
+        {
+            return millimetersrain.ToString();
+        }
+
+        public string gethoursofsunshine()
+        {
+            return hourssunshine.ToString();
+        }
+	
+	
+	class Years
+    {
+        //varibles for the year class
+        private int yearID;
+        private int yeardescription;
+        private int allmonths;
+        Years[] months;
+
+        //two constuctors for the year class
+        public Years(int theyearID, int theyeardescripion, int theallmonths)
+        {
+            yearID = theyearID;
+            yeardescription = theyeardescripion;
+            allmonths = theallmonths;
+            months = null;
+        }
+
+        public Years(int theyearID, int theyearsecription, int theallmonths, Years[] themonths)
+        {
+            yearID = theyearID;
+            yeardescription = theyearsecription;
+            allmonths = theallmonths;
+            months = themonths;
+        }
+        //get the details for each of the years
+        public string getDetails()
+        {
+            string output;
+            output = String.Format("Year is {0} which was {1} and had {2}",
+                     yearID, yeardescription, months.Length);
+            return output;
+        }
+        //getter
+        public Years[] getallmonths()
+        {
+            return months;
+        }
+        //setter
+        public void setallmonths(Years[] themonths)
+        {
+            months = themonths;
+        }
+	
+	
+	
+      
+       
