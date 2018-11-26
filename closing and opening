@@ -1,0 +1,22 @@
+//vairble to set up the closing and opening off other forms
+public static frm_bookstore frmkeepbookstore = null;
+
+//adding a secondary form from the main
+private void btn_addbook_click(object sender, Eventargs e)
+{
+ frm_addbooks tempAddNewBook = new frm_addbooks();
+ tempAddNewBook.show();
+ frmkeepbookstore.hide();
+}
+
+//To return to the main form and the varible to access form
+public static frm_addbooks frm_keepaddbooks = null
+
+priavte void btn_backtomain_click(object sender, Eventargs e)
+{
+frmkeepaddbooks.close();
+frm_bookstore.frmkeepbookstore.show();
+}
+
+must set frm_keepaddbooks = this; on the secondary form
+must set frmkeepbookstore = this; on main form
