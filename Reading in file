@@ -1,4 +1,13 @@
-  StreamReader input = new StreamReader(filename);
+  public void readData()
+        {
+            string filename, inyeardescription, inlocationname, inlocationcounty, inlocationpostcode;
+            int inyearID, inmonths, inlocationstreetnum, inlocationlongitude, inlocationlatitude, inmonthID, inmaximumtemp, inminimumtemp, inairfrost, inmillimetersrain, inhourssunshine;
+            int monthArraySize;
+
+            ofd_Observations.ShowDialog();
+            filename = Ofd_Observations.FileName;
+            
+            StreamReader input = new StreamReader(filename);
             while (!input.EndOfStream)
             {
                 inlocationname = input.ReadLine();
