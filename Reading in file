@@ -1,0 +1,23 @@
+  StreamReader input = new StreamReader(filename);
+            while (!input.EndOfStream)
+            {
+                inlocationname = input.ReadLine();
+                inlocationstreetnum = Convert.ToInt32(input.ReadLine());
+                inlocationcounty = input.ReadLine();
+                inlocationpostcode = input.ReadLine();
+                inlocationlatitude = Convert.ToInt32(input.ReadLine());
+                inlocationlongitude = Convert.ToInt32(input.ReadLine());
+                int numberofyears = Convert.ToInt32(input.ReadLine());
+                months[] tempmontharray = new months[numberofyears];
+                for (int i = 0; i < numberofyears; i++)
+                {
+                    inyearID = Convert.ToInt32(input.ReadLine());
+                    inyeardescription = input.ReadLine();
+                    inmonthID = Convert.ToInt32(input.ReadLine());
+                    inmaximumtemp = Convert.ToInt32(input.ReadLine());
+                    inminimumtemp = Convert.ToInt32(input.ReadLine());
+                    inairfrost = Convert.ToInt32(input.ReadLine());
+                    inmillimetersrain = Convert.ToInt32(input.ReadLine());
+                    inhourssunshine = Convert.ToInt32(input.ReadLine());
+                    
+                } 
