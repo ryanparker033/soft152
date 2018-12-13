@@ -4,7 +4,7 @@ Years2[] allObservations;
         {
             InitializeComponent();
         }
-
+        //showing the observations in the list box
         private void showObservations()
         {
             foreach (Years2 o in allObservations)
@@ -70,7 +70,7 @@ Years2[] allObservations;
             }
             input.Close();
         }
-
+        //growing the array for more observations
         private void growarray(ref Years2[] observations)
         {
             int arraysize;
