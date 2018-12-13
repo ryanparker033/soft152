@@ -1,0 +1,89 @@
+Years2[] allObservations;
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void showObservations()
+        {
+            foreach (Years2 o in allObservations)
+            {
+                lst_observations.Items.Add(o.getDetails());
+            }
+        }
+
+
+
+        public void readData()
+
+        {
+            string filename, inyeardescription, inlocationname, inlocationcounty, inlocationpostcode;
+            int inyearID, inmonths, inlocationstreetnum, inlocationlongitude, inlocationlatitude;
+            int inmonthID, inmaximumtemp, inminimumtemp, inairfrost, inmillimetersrain, inhourssunshine;
+            int monthArraySize;
+            
+
+
+            ofd_observations.ShowDialog();
+            filename = ofd_observations.FileName;
+
+            StreamReader input = new StreamReader(filename);
+            //reading in the location 
+            inlocationname = input.ReadLine();
+            inlocationstreetnum = Convert.ToInt32(input.ReadLine());
+            inlocationcounty = input.ReadLine();
+            inlocationpostcode = input.ReadLine();
+            inlocationlatitude = Convert.ToInt32(input.ReadLine());
+            inlocationlongitude = Convert.ToInt32(input.ReadLine());
+            int numberofyears = Convert.ToInt32(input.ReadLine());
+            Years2[] tempmontharray = new Years2[numberofyears];
+            int i = 0;
+            while (!input.EndOfStream)//loop over all years
+            {
+                inyearID = Convert.ToInt32(input.ReadLine());
+                inyeardescription = input.ReadLine();             
+
+                //Years2[] tempmontharray = new Years2[numberofyears]; - do this but for a month - make an array of 12 months
+                for (int j = 0; j < 12; j++)//loop over 12 months
+                {
+                    //collect all data about one month
+                    inmonthID = Convert.ToInt32(input.ReadLine());
+                    inmaximumtemp = Convert.ToInt32(input.ReadLine());
+                    inminimumtemp = Convert.ToInt32(input.ReadLine());
+                    inairfrost = Convert.ToInt32(input.ReadLine());
+                    inmillimetersrain = Convert.ToInt32(input.ReadLine());
+                    inhourssunshine = Convert.ToInt32(input.ReadLine());
+
+                    //create temp month object
+                    Months2 tempMonths = new Months2(4,4,4,4,4,4);
+
+                    //add month to your months array
+                    Months2[] temparray = new Months2[12];
+                }
+                //crate year tmp object (using data of a year + month array)
+                Years2[] observations = new Years2[numberofyears];
+                //add year into Data.Year array...
+                Years2[i] = new Years2(inyearID, inyeardescription, inmonthID, inmaximumtemp, inminimumtemp, inairfrost, inmillimetersrain, inhourssunshine);
+
+                i = i + 1;
+            }
+            input.Close();
+        }
+
+        private void growarray(ref Years2[] observations)
+        {
+            int arraysize;
+
+            if (observations == null)
+            {
+                arraysize = 0;
+            }
+            else
+                arraysize = observations.Length;
+            Array.Resize(ref observations, arraysize + 1);                   
+        }
+
+
+    }
+}
