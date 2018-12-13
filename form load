@@ -1,0 +1,5 @@
+private voud Form1_load(object sender, EventArgs e)
+{
+readData();
+showObservations();
+}
