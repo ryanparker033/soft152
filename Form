@@ -64,7 +64,7 @@ Years2[] allObservations;
                 //crate year tmp object (using data of a year + month array)
                 Years2[] observations = new Years2[numberofyears];
                 //add year into Data.Year array...
-                Years2[i] = new Years2(inyearID, inyeardescription, inmonthID, inmaximumtemp, inminimumtemp, inairfrost, inmillimetersrain, inhourssunshine);
+                new Years2(inyearID, inyeardescription);
 
                 i = i + 1;
             }
