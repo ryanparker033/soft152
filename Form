@@ -12,8 +12,7 @@ Years2[] allObservations;
                 lst_observations.Items.Add(o.getDetails());
             }
         }
-
-
+        
 
         public void readData()
 
